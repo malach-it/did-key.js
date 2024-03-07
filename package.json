@@ -10,7 +10,6 @@
     "bootstrap": "lerna bootstrap",
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
-    "postinstall": "npm run bootstrap",
     "publish:stable:major": "lerna publish major",
     "publish:stable:minor": "lerna publish minor",
     "publish:stable:patch": "lerna publish patch",

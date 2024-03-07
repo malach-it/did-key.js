@@ -9,7 +9,7 @@ describe('resolve', () => {
     describe(did, () => {
       Object.keys(representations).forEach((representation: any) => {
         it(representation, async () => {
-          const options: ResolutionOptions  = {
+          const options: ResolutionOptions = {
             accept: representation,
             enableEncryptionKeyDerivation: !!representations[representation]
               .keyAgreement,

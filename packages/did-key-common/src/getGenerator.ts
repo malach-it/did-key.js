@@ -3,9 +3,15 @@ import { getResolver } from './getResolver';
 import { getSerialized } from './getSerialized';
 import { ResolutionOptions } from './types';
 
-const getKeys = async (key: LdKeyPairInstance, resolutionOptions: ResolutionOptions) => {
+const getKeys = async (
+  key: LdKeyPairInstance,
+  resolutionOptions: ResolutionOptions
+) => {
   // handle ed25519 to x25519
-  if (resolutionOptions.enableEncryptionKeyDerivation && key.getDerivedKeyPairs) {
+  if (
+    resolutionOptions.enableEncryptionKeyDerivation &&
+    key.getDerivedKeyPairs
+  ) {
     return await key.getDerivedKeyPairs();
   }
 
